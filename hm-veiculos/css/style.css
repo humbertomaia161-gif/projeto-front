@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f4f7;
+  color: #222;
+  line-height: 1.5;
+}
+
+.topo {
+  background: #12355b;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.topo p {
+  opacity: 0.85;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.bloco {
+  margin-bottom: 32px;
+}
+
+.bloco h2 {
+  margin-bottom: 12px;
+  color: #12355b;
+}
+
+.resumo {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 6px solid #12355b;
+}
+
+.resumo p {
+  margin-bottom: 4px;
+}
+
+/* ---------- Controles e botões ---------- */
+.controles {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.linha-controle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.linha-controle:last-child {
+  margin-bottom: 0;
+}
+
+.rotulo-controle {
+  font-weight: bold;
+  min-width: 80px;
+  color: #12355b;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.botao {
+  border: 2px solid #12355b;
+  background: #fff;
+  color: #12355b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.botao:hover {
+  background: #e3ebf5;
+}
+
+.botao:active {
+  transform: scale(0.95);
+}
+
+.botao.ativo {
+  background: #12355b;
+  color: #fff;
+}
+
+.botao-limpar {
+  border-color: #b3261e;
+  color: #b3261e;
+}
+
+.botao-limpar:hover {
+  background: #fbe9e7;
+}
+
+#busca {
+  padding: 7px 12px;
+  border: 2px solid #12355b;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  min-width: 200px;
+}
+
+.contagem {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* ---------- Cartões ---------- */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.cartao {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  border-top: 6px solid #999;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.cartao.favorito {
+  background: #fff8f7;
+  outline: 2px solid #e57373;
+}
+
+.cartao h3 {
+  margin-bottom: 4px;
+}
+
+.cartao .detalhe {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cartao .preco-antigo {
+  text-decoration: line-through;
+  color: #888;
+  margin-top: 8px;
+}
+
+.cartao .preco-final {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.botao-favorito.ativo {
+  background: #c62828;
+  border-color: #c62828;
+}
+
+.botao-interesse {
+  border-color: #2e9e5b;
+  color: #2e9e5b;
+}
+
+.botao-interesse:hover {
+  background: #e6f4ec;
+}
+
+.botao-interesse.ativo {
+  background: #2e9e5b;
+  color: #fff;
+}
+
+.vazio {
+  grid-column: 1 / -1;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  color: #555;
+}
+
+.selo {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+/* Classes de faixa, aplicadas pelo JavaScript com classList */
+.economico {
+  border-top-color: #2e9e5b;
+}
+
+.intermediario {
+  border-top-color: #e0a100;
+}
+
+.premium {
+  border-top-color: #b3261e;
+}
+
+.selo.economico {
+  background: #2e9e5b;
+}
+
+.selo.intermediario {
+  background: #e0a100;
+}
+
+.selo.premium {
+  background: #b3261e;
+}
+
+/* ---------- Categorias ---------- */
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.grupo {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.grupo h3 {
+  color: #12355b;
+  margin-bottom: 8px;
+}
+
+.grupo ul {
+  padding-left: 18px;
+}
+
+.rodape {
+  background: #12355b;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}

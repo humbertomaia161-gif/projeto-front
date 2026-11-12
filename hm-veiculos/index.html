@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HM Veículos - loja de carros em João Pessoa, Paraíba.">
+  <title>HM Veículos | João Pessoa - PB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>HM Veículos</h1>
+    <p>Sua loja de carros em João Pessoa - Paraíba</p>
+  </header>
+
+  <main>
+    <section class="bloco">
+      <h2>Resumo do estoque</h2>
+      <div id="resumo" class="resumo"></div>
+    </section>
+
+    <section class="bloco">
+      <h2>Nossos veículos</h2>
+
+      <div class="controles">
+        <div class="linha-controle">
+          <span class="rotulo-controle">Faixa:</span>
+          <div id="filtros" class="botoes">
+            <button type="button" class="botao ativo" data-faixa="todos">Todos</button>
+            <button type="button" class="botao" data-faixa="economico">Econômico</button>
+            <button type="button" class="botao" data-faixa="intermediario">Intermediário</button>
+            <button type="button" class="botao" data-faixa="premium">Premium</button>
+            <button type="button" class="botao" data-faixa="favoritos">♥ Favoritos</button>
+          </div>
+        </div>
+
+        <div class="linha-controle">
+          <span class="rotulo-controle">Ordenar:</span>
+          <div id="ordens" class="botoes">
+            <button type="button" class="botao ativo" data-ordem="menor">Menor preço</button>
+            <button type="button" class="botao" data-ordem="maior">Maior preço</button>
+            <button type="button" class="botao" data-ordem="novo">Mais novo</button>
+            <button type="button" class="botao" data-ordem="km">Menor km</button>
+          </div>
+        </div>
+
+        <div class="linha-controle">
+          <span class="rotulo-controle">Desconto:</span>
+          <div id="descontos" class="botoes">
+            <button type="button" class="botao" data-desconto="0">0%</button>
+            <button type="button" class="botao ativo" data-desconto="5">5%</button>
+            <button type="button" class="botao" data-desconto="10">10%</button>
+          </div>
+        </div>
+
+        <div class="linha-controle">
+          <label class="rotulo-controle" for="busca">Buscar:</label>
+          <input type="search" id="busca" placeholder="Marca ou modelo...">
+          <button type="button" id="limpar" class="botao botao-limpar">Limpar filtros</button>
+        </div>
+      </div>
+
+      <p id="contagem" class="contagem"></p>
+      <div id="resultado" class="grade"></div>
+    </section>
+
+    <section class="bloco">
+      <h2>Destaques premium</h2>
+      <div id="destaques" class="grade"></div>
+    </section>
+
+    <section class="bloco">
+      <h2>Veículos por categoria</h2>
+      <div id="categorias" class="categorias"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 HM Veículos - João Pessoa, Paraíba</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
